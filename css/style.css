@@ -138,6 +138,54 @@ html, body {
     background-position: center;
 }
 
+.main-overlay-inner {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 2rem;
+    padding: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.main-overlay-inner button span {
+    position: relative;
+    z-index: 9;
+}
+
+.main-overlay .main-overlay-inner button {
+    width: 10rem;
+    font-size: 1rem;
+    padding: .5rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+    transition: color .3s ease-in-out;
+}
+
+.main-overlay .main-overlay-inner button:hover {
+    color: #fff;
+}
+
+.main-overlay .main-overlay-inner button::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: width .3s ease-in-out;
+}
+
+.main-overlay .main-overlay-inner button:hover::before {
+    width: 100%;
+}
+
 .main-toggle {
     text-transform: uppercase;
     cursor: pointer;
@@ -227,6 +275,7 @@ html, body {
 .main__section button {
     border: .5px solid #aaaaaa;
     padding: 1rem;
+    background: transparent;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
@@ -261,5 +310,20 @@ html, body {
 
     .hamburger {
         display: block;
+    }
+}
+
+@media (max-width: 830px) {
+    .main__section {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .main-toggle-inner {
+        width: 100%;
+    }
+
+    .main__section-logo {
+        width: 10%;
     }
 }
