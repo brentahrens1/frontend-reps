@@ -40,6 +40,7 @@ html, body {
     justify-content: space-around;
     padding: 0;
     text-transform: uppercase;
+    font-size: .8rem;
 }
 .nav-list__item, .overlay-list__item {
     list-style: none;
@@ -47,24 +48,24 @@ html, body {
 
 .nav-list__link:link,
 .nav-list__link:visited {
+    position: relative;
     text-decoration: none;
     color: #fff;
     transition: color .3s ease-in-out;
-}
-
-.nav-list__link:link:focus,
-.nav-list__link:visited:focus {
-    color: rgb(205,28,42);
+    padding: .4rem;
 }
 
 .nav-list__link:link::after,
 .nav-list__link:visited::after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 0;
-    background: rgb(205,28,42);
-    transition: width .3s ease-in-out;
+  content: "";
+  background: rgb(205,28,42);
+  display: block;
+  height: 3px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width .5s ease-in-out;
 }
 
 .nav-list__link:link:hover::after,
@@ -72,6 +73,10 @@ html, body {
     width: 100%;
 }
 
+.nav-list__link:link:focus,
+.nav-list__link:visited:focus {
+    color: rgb(205,28,42);
+}
 
 .hamburger {
     display: none;

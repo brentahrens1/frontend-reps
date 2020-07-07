@@ -22,7 +22,7 @@ function doOpen() {
     } else {
         overlay.style.opacity = 0;
         overlay.style.width = 0;
-        bar2.style.background = "black";
+        bar2.style.background = "white";
         bar1.style.transform = 'rotate(0)';
         bar3.style.transform = 'rotate(0)';
         bar1.style.top = `${8}px`;
