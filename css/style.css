@@ -72,6 +72,23 @@ html, body {
     padding: .4rem;
 }
 
+.link-white:link, .link-white:visited {
+    color: #fff;
+}
+
+.link-black:link, .link-black:visited {
+    color: #000;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
 .nav-list__link:link::after,
 .nav-list__link:visited::after {
   content: "";
@@ -313,6 +330,21 @@ html, body {
 .main__section-img {
     width: 16rem;
     height: 16rem;
+    transform: translateX(-50%);
+}
+
+.main__section-info {
+    transform: translateX(50%);
+}
+
+.main__section-info, .main__section-img {
+    transition: opacity 450ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+}
+
+.main__section-info.appear, .main__section-img.appear {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .main__section-img img {
