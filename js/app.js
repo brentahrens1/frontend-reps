@@ -8,6 +8,29 @@ let mainContainerUpcoming = document.querySelector(".main-container-upcoming");
 let upcoming = document.querySelector(".upcoming");
 let past = document.querySelector(".past");
 let open = false;
+let mainToggle = document.querySelector(".main-toggle");
+let mainNav = document.querySelector("nav");
+let navLink = document.querySelector(".nav-list__link");
+
+const options = {
+    root: null,
+    threshold: 0,
+    rootMargin: "-120px"
+}
+
+const observer = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            mainNav.classList.add("nav");
+            mainNav.classList.remove("nav2");
+        } else {
+            mainNav.classList.remove("nav");
+            mainNav.classList.add("nav2");
+        }
+    })
+},options);
+
+observer.observe(mainToggle);
 
 function doOpen() {
     open = !open;

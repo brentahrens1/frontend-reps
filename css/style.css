@@ -15,7 +15,9 @@ html, body {
     height: 4rem;
     position: fixed;
     top: 0;
+    margin: 0 auto;
     background: #000;
+    color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,8 +25,24 @@ html, body {
     z-index: 999;
 }
 
+.nav2 {
+    width: 90vw;
+    height: 4rem;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    transition: width 1s ease-in-out;
+}
+
 .nav-logo {
-    color: #fff;
     width: 10%;
 }
 
@@ -50,7 +68,6 @@ html, body {
 .nav-list__link:visited {
     position: relative;
     text-decoration: none;
-    color: #fff;
     transition: color .3s ease-in-out;
     padding: .4rem;
 }
